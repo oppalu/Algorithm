@@ -76,7 +76,51 @@ public class In2Post {
         System.out.println();
     }
 
+    public static String trans(String s) {
+        String result="";
+        stack.push('#');
+        for(int i=0;i<s.length();i++) {
+            char temp = s.charAt(i);
+            if((temp>='a'&&temp<='z') || (temp>='A'&&temp<='Z') || (temp>='0'&&temp<='9')) {
+                result += temp;
+            } else if(temp == '('){
+                stack.push(temp);
+            } else if(temp == ')') {
+                while(!stack.isEmpty()) {
+                    char c = stack.peek();
+                    if(c != '(') {
+                        result += stack.pop();
+                    } else {
+                        stack.pop();
+                        break;
+                    }
+                }
+            } else {
+                char c = stack.peek();
+                if(compare(temp,c))
+                    stack.push(temp);
+                else {
+                    while(!stack.isEmpty()) {
+                        char tmp = stack.peek();
+                        if(!compare(temp,tmp))
+                            result += stack.pop();
+                        else {
+                            stack.pop();
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        while(!stack.isEmpty()) {
+            char t = stack.pop();
+            if(t != '#')
+                result += t;
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
-        transfer("3+(6-4/2)*5");
+        System.out.print(trans("3+(6-4/2)*5"));
     }
 }

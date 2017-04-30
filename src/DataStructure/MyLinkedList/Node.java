@@ -1,4 +1,4 @@
-package MyLinkedList;
+package DataStructure.MyLinkedList;
 
 /**
  * Created by phoebegl on 2017/4/27.

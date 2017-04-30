@@ -1,7 +1,7 @@
 package DataStructure;
 
-import MyLinkedList.MyList;
-import MyLinkedList.Node;
+import DataStructure.MyLinkedList.MyList;
+import DataStructure.MyLinkedList.Node;
 
 /**
  * Created by phoebegl on 2017/4/21.
