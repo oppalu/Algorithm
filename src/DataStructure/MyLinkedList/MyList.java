@@ -68,6 +68,10 @@ public class MyList {
         return result;
     }
 
+    public boolean isEmpty() {
+        return getSize() == 0 ? true : false;
+    }
+
     public int find(int x) {
         Node temp = getHead();
         int index = 0;

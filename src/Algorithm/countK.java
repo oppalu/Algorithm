@@ -1,4 +1,4 @@
-package DataStructure;
+package Algorithm;
 
 import DataStructure.MyLinkedList.MyList;
 import DataStructure.MyLinkedList.Node;
