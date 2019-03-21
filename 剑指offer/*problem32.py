@@ -39,4 +39,4 @@ class Solution:
 
         return count
 
-print(Solution().NumberOf1Between1AndN_Solution2(12))
+print(Solution().NumberOf1Between1AndN_Solution2(13))

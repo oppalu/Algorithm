@@ -15,6 +15,7 @@
         # 当匹配多于一个字符时，相当于从str的下一个字符继续开始匹配）
 
 class Solution:
+        
     # s, pattern都是字符串
     def match(self, s, pattern):
         if len(s) == 0 and len(pattern) == 0:
@@ -38,4 +39,6 @@ class Solution:
                 return False
 
 print(Solution().match("a","a*a"))
+
+print(Solution().match("aaaaaaaaaaaaab", "a*a*a*a*a*a*a*a*a*a*c"))
 

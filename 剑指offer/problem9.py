@@ -10,7 +10,13 @@ class Solution:
             return 0
         if(n == 1):
             return 1
-        return self.Fibonacci1(n-1) + self.Fibonacci1(n-2)
+        
+        d = [0 for i in range(n+1)]
+        d[1] = 1
+        
+        for i in range(2, n+1):
+            d[i] = d[i-1]+d[i-2]
+        return d[n]
 
     def Fibonacci2(self, n):
         if(n == 0):
